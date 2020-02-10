@@ -1,0 +1,133 @@
+/* this is where all of your CSS styles go */
+/* Global Styles : DO NOT EDIT */
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+.grid_container {
+	width: 350px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%; /* for optical centering */
+	margin-top: -50px;
+	margin-left: -175px;
+}
+
+.mono {
+  font-family: 'Playfair Display', serif;
+  font-size: 5em;
+	float: left;
+	margin-left: 5px;
+}
+
+
+/* Animation Keyframes */
+
+@keyframes move_p {
+	0% {left: 0px; color: black;}
+	40% {color: black;}
+	96% {color: red;}
+	98% {color: black;}
+	100% {left: 50px; color: red;}
+}
+
+.p {
+	position: relative;
+	animation: move_p 4s alternate infinite ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move_o1 {
+	0% {left: 0px;}
+	50% {opacity: 0}
+	/*90% {transform: rotate(0deg);}
+	95% {transform: rotate(-180deg);}
+	100% {left: 110px; color: white; transform: rotate(-180deg);}*/
+	100% {left: 111px; color: white;}
+}
+.o1 {
+	position: relative;
+	animation: move_o1 4s alternate infinite ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes fade_ta {
+	0% {opacity: 1; top: 0px;}
+	75% {opacity: 0;}
+	100% {opacity: 0; top: 200px;}
+}
+
+.t1 {
+	position: relative;
+	animation: fade_ta 4s alternate infinite ease-in-out;
+	animation-fill-mode: forwards;
+}
+.a {
+	position: relative;
+	animation: fade_ta 4s alternate infinite ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move_t2 {
+	0% {top: 0px;}
+	50% {top: -125px;}
+	100% {top: 0px; color: white}
+}
+
+@keyframes move_o2 {
+	0% {top: 0px;}
+	50% {top: -100px;}
+	100% {top: 0px; color: white}
+}
+
+.t2 {
+	position: relative;
+	animation: move_t2 4s alternate infinite ease-in-out;
+}
+.o2 {
+	position: relative;
+	animation: move_o2 4s alternate infinite ease-in-out;
+}
+
+@keyframes enter_h {
+	0% {opacity: 0; top: -200px; left: 0px;}
+	40% {opacity: 0;}
+	100% {opacity: 1; top: -80px; left: 100px; color: white;}
+}
+
+.h {
+	opacity: 0;
+	position: relative;
+	animation: enter_h 4s alternate infinite ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+/* background */
+
+@keyframes reg_cir {
+	0% {transform: rotate(0deg); width: 0px; height: 0px; border-radius: 0%; opacity: 0;}
+	55% {transform: rotate(0deg); background: black; width: 400px; height: 250px; border-radius: 0%; opacity: 1;}
+	85% {transform: rotate(-360deg); width: 300px; height: 300px; border-radius: 100%; opacity: 1;}
+	100% {transform: rotate(0deg); width: 0px; height: 0px; border-radius: 0%; opacity: 0;}
+}
+
+.square_circle {
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: -1;
+	opacity: 0;
+	animation: reg_cir 8s infinite;
+}
+
+
+/* last line */
